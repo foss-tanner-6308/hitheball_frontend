@@ -45,17 +45,17 @@ class _CreateGameScreenState extends State<CreateGameScreen> {
   var hour = '00';
   var minute = '00';
   var _hourValue = 0;
-  var _minuteValue = 30;
+  var _minuteValue = 10;
 
   var _minimumMinuteSelector =
       5; //this updates to 0 once hours goes to higher than 1, and back to 0.
   var _createGameButtonActive = true;
 
-  final tagRadiusController = TextEditingController(text: '10');
-  final viewRadiusController = TextEditingController(text: '30');
-  final playersController = TextEditingController(text: '20');
-  final flagsController = TextEditingController(text: '3');
-  final coinsController = TextEditingController(text: '5');
+  final tagRadiusController = TextEditingController(text: '5');
+  final viewRadiusController = TextEditingController(text: '15');
+  final playersController = TextEditingController(text: '4');
+  final flagsController = TextEditingController(text: '1');
+  final coinsController = TextEditingController(text: '0');
 
   bool isChessOn = false;
   final GameState _gameState = GameState();
@@ -253,29 +253,29 @@ class _CreateGameScreenState extends State<CreateGameScreen> {
                             strokeWidth: 4,
                             strokeColor: Colors.black,
                             textColor: Colors.white,
-                            text: 'Number of Flags:',
-                            textRightPadding: 12.0,
+                            text: 'Number of Rounds:',
+                            textRightPadding: 9.0,
                             inputBoxHeight: inputBoxHeight,
                             inputBoxWidth: inputBoxWidth,
                             keyboardType: TextInputType.number,
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: InputRow(
-                            formController: coinsController,
-                            allowedInput: RegExp("[0-9]"),
-                            fontSize: 20,
-                            strokeWidth: 4,
-                            strokeColor: Colors.black,
-                            textColor: Colors.white,
-                            text: 'Number of Coins:',
-                            textRightPadding: 12.0,
-                            inputBoxHeight: inputBoxHeight,
-                            inputBoxWidth: inputBoxWidth,
-                            keyboardType: TextInputType.number,
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: const EdgeInsets.all(4.0),
+                        //   child: InputRow(
+                        //     formController: coinsController,
+                        //     allowedInput: RegExp("[0-9]"),
+                        //     fontSize: 20,
+                        //     strokeWidth: 4,
+                        //     strokeColor: Colors.black,
+                        //     textColor: Colors.white,
+                        //     text: 'Number of Coins:',
+                        //     textRightPadding: 12.0,
+                        //     inputBoxHeight: inputBoxHeight,
+                        //     inputBoxWidth: inputBoxWidth,
+                        //     keyboardType: TextInputType.number,
+                        //   ),
+                        // ),
                         Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Row(
@@ -388,33 +388,33 @@ class _CreateGameScreenState extends State<CreateGameScreen> {
                               strokeColor: Colors.black,
                               textColor: Colors.white,
                               strokeWidth: 4,
-                              text: 'Tag Radius (m):',
+                              text: 'Hit Radius (m):',
                               textRightPadding: 12),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              const TextWithOutline(
-                                  fontSize: 20,
-                                  strokeWidth: 4,
-                                  strokeColor: Colors.black,
-                                  textColor: Colors.white,
-                                  text: "Chess:"),
-                              Switch(
-                                value: isChessOn,
-                                onChanged: (value) {
-                                  setState(() {
-                                    isChessOn = value;
-                                  });
-                                },
-                                activeTrackColor: Colors.green,
-                                activeColor: Colors.white,
-                              ),
-                            ],
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: const EdgeInsets.all(4.0),
+                        //   child: Row(
+                        //     mainAxisAlignment: MainAxisAlignment.end,
+                        //     children: [
+                        //       const TextWithOutline(
+                        //           fontSize: 20,
+                        //           strokeWidth: 4,
+                        //           strokeColor: Colors.black,
+                        //           textColor: Colors.white,
+                        //           text: "Chess:"),
+                        //       Switch(
+                        //         value: isChessOn,
+                        //         onChanged: (value) {
+                        //           setState(() {
+                        //             isChessOn = value;
+                        //           });
+                        //         },
+                        //         activeTrackColor: Colors.green,
+                        //         activeColor: Colors.white,
+                        //       ),
+                        //     ],
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),
